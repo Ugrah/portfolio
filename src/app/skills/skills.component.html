@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let skill of skills" class="col">
+      <img [src]="'../../assets/img/'+ skill.imagePath" width="50px">
+      <h4 class="text-primary">{{ skill.name }}</h4>
+      <p>{{ skill.description }}</p>
+      <div *ngIf="skill.others[0]">
+        <h5 class="text-primary">{{skill.others[0].name}}</h5>
+        <ul>
+          <li *ngFor="let item of skill.others[0].items">{{ item }}</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-primary" *ngIf="skill.others[1].name">{{skill.others[1].name}}</h5>
+        <p>{{ skill.others[1].items }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
