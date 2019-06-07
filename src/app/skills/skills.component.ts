@@ -10,10 +10,10 @@ import {Skill} from '../models/skills.mapping';
 export class SkillsComponent implements OnInit {
   skills: Skill[] = [];
 
-  constructor(private skillsServices: SkillsService) { }
+  constructor(private skillsService: SkillsService) { }
 
   ngOnInit() {
-    this.skills = this.skillsServices.skills;
+    this.skills = this.skillsService.getSkills();
   }
 
 }

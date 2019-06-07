@@ -5,6 +5,10 @@ import {Skill, SkillMock} from '../models/skills.mapping';
   providedIn: 'root'
 })
 export class SkillsService {
-  skills: Skill[] = SkillMock;
+  private skills: Skill[] = SkillMock;
   constructor() { }
+
+  getSkills(){
+    return this.skills;
+  }
 }
